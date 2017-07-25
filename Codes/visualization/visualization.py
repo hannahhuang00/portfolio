@@ -44,5 +44,15 @@ cover_temps = {}
 for cover, cover_data in data.groupby("cloud_cover"):
     cover_temps[cover] = cover_data.mean_temp.mean()
 
-for (cover, events), group_data in data.groupby(["cloud_cover", "events"]):
-    print "Cover: {0}, Events: {1}, Count: {2}".format(cover, events, len(group_data))
+#for (cover, events), group_data in data.groupby(["cloud_cover", "events"]):
+#    print ("Cover: {0}, Events: {1}, Count: {2}".format(cover, events, len(group_data)))
+
+for event_kind in ["Rain", "Thunderstorm", "Fog", "Snow"]:
+    col_name = event_kind.lower()  # Turn "Rain" into "rain", etc.
+    data[col_name] = data.events.apply(lambda e: event_kind in e)
+
+ax = data.min_wind.plot(title="Min vs. Max Wind Speed")
+data.max_wind.plot(style="red", ax=ax)
+(ax.set_ylabel("Miles/Hour"))
+print(ax)
+plt.show()
