@@ -127,6 +127,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   visibility: visible;
 }
 
+.swiper-picture-wrap {
+  padding-bottom: 80px;
+}
+
+.swiper-picture-wrap{
+  text-align: center;
+  font-style: italic;
+}
+
+
 .testimonial-wrap {
   padding: 50px 50px 80px 50px;
   background: #eceff2;
@@ -324,13 +334,26 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   display: none;
 }
 
-button {
+p .exp-date {
+  font-style: italic;
+}
+
+p .exp-title {
+  font-weight: bold;
+}
+
+.btn {
   background-color: white;
   border: none;
   color: black;
-  padding: 15px 32px;
-  text-align: center;
+  transition: 0.3s;
 }
+
+.btn:hover {
+  opacity: 0.4;
+}
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
