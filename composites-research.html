@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Hannah Huang's Portfolio - Composite Materials Research</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo-white.png" rel="icon">
+  <link href="assets/img/logo-white.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio - v4.6.0
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col p-4">
+          <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section-first">
+      <div class="container">
+        <div class="row mb-1">
+          <div class="col-md-6" data-aos="fade-up">
+            <button class="btn text-muted" onclick="history.back()">&#60;&#60; Return</button>
+            <h2>Composite Materials Research</h2>
+            <p class="text-muted">Neural Network • Python • MATLAB</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-6" data-aos="fade-up">
+              <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="swiper-picture-wrap">
+                      <img src="assets/img/research/nn-prediction.png" alt="Image" class="img-fluid">
+                      <figcaption>Training and validating feed-forward neural network.</figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-picture-wrap">
+                      <img src="assets/img/research/correlation-matrix.png" alt="Image" class="img-fluid">
+                      <figcaption>Correlation matrix of material property inputs.</figcaption>
+                    </div>
+                  </div>
+                  
+                  <div class="swiper-slide">
+                    <div class="swiper-picture-wrap">
+                      <img src="assets/img/research/pca.png" alt="Image" class="img-fluid">
+                      <figcaption>Reducing data's dimensions from 17 features to 4 principal components through PCA.</figcaption>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content pt-2">
+                <p><a href="assets/files/my-work/composites-research.pdf" class="readmore" target="_blank">View Published Article</a></p>
+                <h3 class="h3">Overview</h3>
+                <p>I started this project during the summer of 2020, coming fresh out of freshman year, at the start of COVID. Professor
+                  Wing Kam Liu was an early pioneer in "Mechanicstic Data Science," in which mechanistic models (known equations and
+                  mechanical behavior) are combined with empirical models (purely statistical and repeated observation). This combination allows 
+                  for complex predictions without the need for nearly as much data that purely empirical models require. With little knowlege 
+                  at the time, I was lucky that Professor Liu taught me general data science and neural networks from scratch 
+                  and entrusted me to my own research project with guidance from one of his PhD students. I applied mechanistic data science to 
+                  inform the creation of composite materials, and published in Summer of 2022, at the end of my junior year.
+                </p>
+                <ul class="list-unstyled list-line mb-5">
+                  What I did:
+                  <li><b>Generated</b> 15,000 stress-strain responses for 12 different unidirectional fiber-matrix composite materials.</li>
+                  <li><b>Extracted</b> 17 features from stress-strain results.</li>
+                  <li><b>Reduced dimension</b> of dataset from 15,000 to 3,000 datapoints by averaging 5 microstructure realizations.</li>
+                  <li><b>Reduced dimension</b> of features from 17 to 4 through principal component analysis (PCA).</li>
+                  <li><b>Created, trained, and validated</b> a Feed Forward Neural Network (FFNN).</li>
+                  <li><b>Predicted</b> composite compositions for desired material properties to inform composite creation.</li>
+                  <li><b>Published</b> article with first-author designation in <i>Computational Materials Science</i>, 
+                    "Knowledge database creation for design of polymer matrix composite"</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <h3 class="h3">Tools & Software</h3>
+            <p><b>MATLAB</b>
+              <ul class="list-unstyled list-line">
+                <li>Generated random, 3-dimension, unidirectional microstructures given a specific fiber volume fraction.</li>
+                <li>Used MATLAB-based FEA package developed by lab to simulate stress-strain responses.</li>
+                <li>Extracted mechanical properties from stress-strain responses.</li>
+              </ul></p>
+            <p><b>Python</b>
+              <ul class="list-unstyled list-line">
+                <li>Reduced data with scikit-learn.</li>
+                <li>Developed FFNN with TensorFlow.</li>
+              </ul>
+            </p>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy; Copyright MyPortfolio. All Rights Reserved</p>
+          <div class="credits">
+            <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
+          -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

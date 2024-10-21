@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MyPortfolio Bootstrap Template - Work Single</title>
+  <title>Hannah Huang's Portfolio - Baja SAE Frame</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,25 +38,23 @@
   <!-- ======= Navbar ======= -->
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
-      <div>
-        <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+      <div class="row">
+        <div class="col p-4">
+          <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+        </div>
       </div>
     </div>
   </nav>
 
   <main id="main">
-    <section class="section">
+    <section class="section-first">
       <div class="container">
-        <div class="row mb-4 align-items-center">
+        <div class="row mb-1">
           <div class="col-md-6" data-aos="fade-up">
             <button class="btn text-muted" onclick="history.back()">&#60;&#60; Return</button>
             <h2>Baja SAE Frame</h2>
             <p class="text-muted">SolidWorks • FEA • Design For Manufacturing</p>
           </div>
-          <div class="col-md-6" data-aos="fade-up">
-            <p><a href="assets/files/my-work/frame-design-doc.pdf" class="readmore" target="_blank">View Full Design Document</a></p>
-          </div>
-
         </div>
       </div>
 
@@ -70,21 +68,28 @@
                   <div class="swiper-slide">
                     <div class="swiper-picture-wrap">
                       <img src="assets/img/frame/chassis.png" alt="Image" class="img-fluid">
-                      <figcaption>SolidWorks model</figcaption>
+                      <figcaption>SolidWorks model.</figcaption>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-picture-wrap">
+                      <img src="assets/img/frame/rear-impact-fea.png" alt="Image" class="img-fluid">
+                      <figcaption>Rear impact FEA, with FOS of 1.27.</figcaption>
                     </div>
                   </div>
                   
                   <div class="swiper-slide">
                     <div class="swiper-picture-wrap">
                       <img src="assets/img/frame/welded_frame.png" alt="Image" class="img-fluid">
-                      <figcaption>Fully welded frame</figcaption>
+                      <figcaption>Fully welded frame.</figcaption>
                     </div>
                   </div>
 
                   <div class="swiper-slide">
                     <div class="swiper-picture-wrap">
                       <img src="assets/img/frame/pre-paint.png" alt="Image" class="img-fluid">
-                      <figcaption>Fully built car, before paint</figcaption>
+                      <figcaption>Fully built car, before paint.</figcaption>
                     </div>
                   </div>
 
@@ -98,7 +103,7 @@
                   <div class="swiper-slide">
                     <div class="swiper-picture-wrap">
                       <img src="assets/img/frame/baja-driving.jpeg" alt="Image" class="img-fluid">
-                      <figcaption>The car in action at comp (Oshkosh, WI 2023)</figcaption>
+                      <figcaption>The car in action at comp (Oshkosh, WI 2023).</figcaption>
                     </div>
                   </div>
 
@@ -108,22 +113,21 @@
             </div>
 
             <div class="col-md-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="sticky-content">
-                <h3 class="h3">Goals & Requirements</h3>
-                <p>While our frame has gone through many improvements, the overall design felt very stagnant. The year before had the lightest frame since
-                  our team began designing a 4WD car, but I wanted to make it even lighter. I also wanted to introduce new tube geometry, as our previous
-                  cars seemed to have many straight tubes that had to be welded together—-instead of bent, continuous tubes.
+              <div class="sticky-content pt-2">
+                <p><a href="assets/files/my-work/frame-design-doc.pdf" class="readmore" target="_blank">View Full Design Document</a></p>
+                <h3 class="h3">Overview</h3>
+                <p>During the summer of 2022 (going into my Senior year), I designed the frame for the 2023 Northwestern Baja SAE car, while simultaneously 
+                  working 50 hours a week at a full-time job. 
                 </p>
                 <ul class="list-unstyled list-line mb-5">
-                  <li><b>Safety</b>: The #1 priority is to keep the driver safe by designing for the worst impact conditions 
-                    and ensuring the driver is fully encompassed by the frame.</li>
-                  <li><b>Packaging</b>: The frame must be able to fit and properly interface with components from all the other teams,
-                    including powertrain, suspension, and ergonomics. For that year, the competition-required engine was changed to a
-                    bigger, heavier engine.</li>
-                  <li><b>Manufacturability</b>: The frame's tubes must be compatible with the CNC tube benders at the company we work with and
-                    weldable by our team.</li>
-                  <li><b>Weight</b>: Overall, we want to decrease weight to make the car faster.</li>
-                  <li><b>Baja SAE Rules Compliance</b>: The frame must comply to all rules set by Baja SAE to ensure fairness and safety of the driver.</li>
+                  What I did:
+                  <li><b>Researched</b> previous frames made by our team and other teams.</li>
+                  <li><b>Designed</b> using Solidworks Weldments.</li>
+                  <li><b>Optimized</b> for weight and manufacturability.</li>
+                  <li><b>Calculated impact loads</b> and simulated them with Solidworks Simulation (FEA package).</li>
+                  <li><b>Collaborated</b> with other subteams to ensure proper support for suspension points and packaging of internal components.</li>
+                  <li><b>Communicated</b> with the supplier and team's welders to ensure manufacturability.</li>
+                  <li><b>Tested</b> the car in 6+ hours of simulated competition driving.</li>
                 </ul>
               </div>
             </div>
@@ -132,9 +136,34 @@
     </section>
     <section>
       <div class="container">
+        <div class="row" data-aos="fade-up">
+          <h3 class="h3">Goals & Requirements</h3>
+            <p>While our frame has gone through many improvements, the overall design felt very stagnant. The year before had the lightest frame since
+              our team began designing a 4WD car, but I wanted to make it even lighter. I also wanted to introduce new tube geometry, as our previous
+              cars seemed to have many straight tubes that had to be welded together—-instead of bent, continuous tubes.
+            </p>
+            <ul class="list-unstyled list-line mb-5">
+              <li><b>Safety</b>: The #1 priority is to keep the driver safe by designing for the worst impact conditions 
+                and ensuring the driver is fully encompassed by the frame.</li>
+              <li><b>Packaging</b>: The frame must be able to fit and properly interface with components from all the other teams,
+                including powertrain, suspension, and ergonomics. For that year, the competition-required engine was changed to a
+                bigger, heavier engine.</li>
+              <li><b>Manufacturability</b>: The frame's tubes must be compatible with the CNC tube benders at the company we work with and
+                weldable by our team.</li>
+              <li><b>Weight</b>: Overall, we want to decrease weight to make the car faster.</li>
+              <li><b>Baja SAE Rules Compliance</b>: The frame must comply to all rules set by Baja SAE to ensure fairness and safety of the driver.</li>
+            </ul>
+        </div>
         <div class="row justify-content-center" data-aos="fade-up">
           <h3 class="h3">Design</h3>
-          <div class="col-6" >
+          <div class="col-6">
+            <p>While the design proccess may seem straight-forward, it was an extremely iterative process. The graphic shows how to simply
+              design a competition-ready car. It does not show the trial-and-error involved in also optimizing the design for 
+              weight and manufacturability, while still adhering to the criteria in the diagram. Those steps were more hollistic and heavily
+              aided by engineering experience and intuition.
+            </p>
+          </div>
+          <div class="col-6">
             <img src="assets/img/frame/design-process.png" class="img-fluid">
           </div>
         </div>
@@ -142,8 +171,8 @@
           <div class="col">
             <h3 class="h3">Outcomes</h3>
             <ul class="list-unstyled list-line mb-5">
-              <li><b>Reduced weight</b> from 76.14 lbs to 60.71 lbs (20%), mostly through using a thinner wall thickness tube for secondary members. 
-                While the thinner wall thickness should be more difficult to weld, our welders were pretty experienced and didn't mind it.</li>
+              <li><b>Reduced weight</b> from 76.14 lbs to 60.71 lbs (20%), mostly through the use of a thinner wall thickness tube for secondary members. 
+                Even though a thinner wall thickness should be more difficult to weld, our welders were experienced enough to be able to weld it properly.</li>
               <li><b>Reduced # of tubes</b> from 81 to 69 (15%) by introducing continuous tubes with multiple bends.
                 The welders really appreciated welding less tubes and welding less complicated intersections of several coped tubes.</li>
               <li>Allowed proper packaging of all components.</li>
@@ -170,12 +199,6 @@
           -->
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
-        </div>
-        <div class="col-sm-6 social text-md-end">
-          <a href="#"><span class="bi bi-twitter"></span></a>
-          <a href="#"><span class="bi bi-facebook"></span></a>
-          <a href="#"><span class="bi bi-instagram"></span></a>
-          <a href="#"><span class="bi bi-linkedin"></span></a>
         </div>
       </div>
     </div>

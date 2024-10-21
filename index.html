@@ -38,23 +38,25 @@
   <!-- ======= Navbar ======= -->
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
-      <div>
-        <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+      <div class="row">
+        <div class="col p-4">
+          <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+        </div>
       </div>
     </div>
   </nav>
 
   <main id="main">
     <!-- ======= Intro Section ======= -->
-    <section class="section site-portfolio">
+    <section class="section-first site-portfolio">
       <div class="container">
         <div class="row" data-aos="fade-up">
-          <div class="col">
-            <img class="profile" src="assets/img/profile.png">
+          <div class="col-12 col-md-3">
+            <img class="img-fluid" src="assets/img/profile.png">
           </div>
-          <div class="col-10">
+          <div class="col-12 col-md-9">
             <h2>Hi, I'm Hannah!</h2>
-          <p class="mb-0">I graduated from <b>Northwestern University</b> in 2023 with a <b>Bachelor's</b> 
+            <p class="mb-0">I graduated from <b>Northwestern University</b> in 2023 with a <b>Bachelor's</b> 
             and <b>Master's</b> Degree in <b>Mechanical Engineering</b>. I have sinced worked at Boeing, as a 
             Design Engineer for 737 Mechanical/Hydraulic Systems. I have primarily worked in the manufacturing area because 
             I love being close to the action, solving problems quickly and effectively, and working directly with technicians and 
@@ -62,7 +64,7 @@
             I have a strong interest in <b>Manufacturing</b>, <b>Design</b>, and <b>Automation</b>.</p>
             <br>
             <div class="intro-links">
-              <a href="#">Resumé</a>
+              <a href="#">Resume</a>
               <a href="#">Linkedin</a>
             </div>
           </div>
@@ -84,7 +86,7 @@
         <div class="row mb-5 align-items-center">
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up">
             <h2>Projects</h2>
-            <p>Click a tile to learn more.</p>
+            <p>Click a project to learn more.</p>
           </div>
           <div class="col-md-12 col-lg-9 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
             <div id="filters" class="filters">
@@ -107,7 +109,7 @@
             </a>
           </div>
           <div class="item control design analysis col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="work-single.html" class="item-wrap fancybox">
+            <a href="e-bike.html" class="item-wrap fancybox">
               <div class="work-info">
                 <h3>Smart e-Bike</h3>
                 <span>PID Control • Mechatronics • IoT</span>
@@ -116,7 +118,7 @@
             </a>
           </div>
           <div class="item analysis col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://doi.org/10.1016/j.commatsci.2022.111703" target="_blank" class="item-wrap fancybox">
+            <a href="composites-research.html" target="_blank" class="item-wrap fancybox">
               <div class="work-info">
                 <h3>Composite Materials Research</h3>
                 <span>Neural Network • Python • MATLAB</span>
@@ -125,16 +127,16 @@
             </a>
           </div>
           <div class="item control col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="work-single.html" class="item-wrap fancybox">
+            <a href="youbot-simulation.html" class="item-wrap fancybox">
               <div class="work-info">
-                <h3>Robotic Simulation</h3>
+                <h3>KUKA youBot Simulation</h3>
                 <span>Robotic Manipulation • Simulation • CoppeliaSim</span>
               </div>
               <img class="img-fluid" src="assets/img/coppelia.png">
             </a>
           </div>
           <div class="item design manufacturing col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="work-single.html" class="item-wrap fancybox">
+            <a href="force-test.html" class="item-wrap fancybox">
               <div class="work-info">
                 <h3>Force Test Assembly</h3>
                 <span>Human Design • SolidWorks</span>
@@ -257,10 +259,10 @@
           <p class="exp-title">Undergraduate Researcher</p>
           <p class="exp-date">September 23-Current</p>
           <li>Published in <em>Computational Materials Science</em> with first author designation after training a neural network model to inform the creation of unidirectional composite materials; presented findings at the 2021 MMLDT-CSET conference. </li>
-          <li>Generated 2,000 mechanical responses for 9 different composite materials with varied filler volume fractions and temperatures by using a modified FEA approach to increase computational speed, at little cost to accuracy. </li>
+          <li>Generated 15,000 mechanical responses for 12 different composite materials with varied filler volume fractions and temperatures by using a modified FEA approach to increase computational speed, at little cost to accuracy. </li>
           <li>Extensively cleaned and analyzed data through Python, using principal component analysis, data scaling/normalization, etc.</li>
           <br>
-          <p><b>Click <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927025622004268" target="_blank">here</a> to view the article</b></p>
+          <p><a href="assets/files/my-work/composites-research.pdf" class="readmore" target="_blank">View Published Article</a></p>
         </div>
         <div class="exp" id="experience2">
           <h2>ITW</h2>
@@ -367,46 +369,15 @@
       </div>
     </section><!-- End Skills Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section class="section pt-0">
+    <section><!-- Contact -->
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Jean Hicks</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+        <div class="row">
+          <div class="col-12">
+           
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
-
+    </section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -424,12 +395,6 @@
           -->
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
-        </div>
-        <div class="col-sm-6 social text-md-end">
-          <a href="#"><span class="bi bi-twitter"></span></a>
-          <a href="#"><span class="bi bi-facebook"></span></a>
-          <a href="#"><span class="bi bi-instagram"></span></a>
-          <a href="#"><span class="bi bi-linkedin"></span></a>
         </div>
       </div>
     </div>

@@ -13,6 +13,10 @@ body {
   color: #0d1e2d;
 }
 
+figcaption {
+  text-align: center;
+}
+
 a {
   color: #777;
   text-decoration: none;
@@ -28,6 +32,10 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .section {
   padding: 3rem 0;
+}
+
+.section-first {
+  padding: 0;
 }
 
 .filters a {
@@ -72,6 +80,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   position: relative;
   overflow: hidden;
 }
+
 .item .item-wrap:after {
   z-index: 2;
   position: absolute;
@@ -125,6 +134,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   margin-top: 0px;
   opacity: 1;
   visibility: visible;
+}
+
+.embed-responsive video{
+  width: 70vw;
+  display: block;
+  margin: auto;
 }
 
 .swiper-picture-wrap {
@@ -244,10 +259,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: #000;
 }
 
-.profile {
-  width: 12rem;
-}
-
 .intro-links a {
   padding: 0 2rem 0 0;
 }
@@ -360,7 +371,7 @@ p .exp-title {
 /* Custom Navbar */
 
 .custom-navbar {
-  padding-top: 50px;
+  padding-top: 25px;
   width: 100%;
 }
 
@@ -375,7 +386,6 @@ p .exp-title {
 }
 
 .navbar-links a {
-  padding: 1rem;
   font-size: 20px;
 }
 
