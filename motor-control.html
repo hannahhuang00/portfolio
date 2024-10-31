@@ -40,13 +40,14 @@
     <div class="container">
       <div class="row">
         <div class="col p-4">
-          <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a>
+          <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"><h1 class="header">HANNAH HUANG'S PORTFOLIO</h1></a>
         </div>
       </div>
     </div>
   </nav>
 
   <main id="main">
+    
     <section class="section-first">
       <div class="container">
         <div class="row mb-1">
@@ -57,55 +58,113 @@
           </div>
         </div>
       </div>
-
+      <div class="container">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12 ml-auto">
+            <h3 class="h3">Overview</h3>
+            <div class="clearfix">
+              <img src="assets/img/motor-control/block-diagram.png" class="col-md-8 float-md-end mb-3 ms-md-3">
+              <p>I completed this project for a mechatronics class I took during my Sophomore year (2021).
+                In this project, I wired and programmed the NU32 PIC32 microcontroller to control the position of a motor. 
+                The code stored on the microcontroller was programmed in C, which communicates with a MATLAB client. Through the MATLAB 
+                client, the user inputs a trajectory of angles that will be tracked by the motor. 
+              </p>
+              <p>The block diagram shows an inner current (PI) controller and an outer position (PID) controller, with weights that can be adjusted by 
+                the user through the client. This project was divided into hardware and software. See examples demonstrations of the motor 
+                interacting with the MATLAB client below.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
       <div class="site-section pb-0">
         <div class="container">
-          <div class="row">
-            <div class="col-12" data-aos="fade-up">
+          <div class="row mb-4">
+            <div class="col-md-12" data-aos="fade-up">
               <div class="embed-responsive embed-responsive-16by9">
-                <video class="embed-responsive-item" controls autoplay>
-                  <source src="assets/img/e-bike/ebike-demo.mp4" type="video/mp4">
+                <video class="embed-responsive-item" controls>
+                  <source src="assets/img/motor-control/step-trajectory.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
-                <figcaption>Demonstration of e-bike assist changing based on user heartrate. Phone app and Altair's real-time visualization
-                  software is also shown.</figcaption>
+                <figcaption>Demonstration of tracking a step trajectory input by the user in a MATLAB client.</figcaption>
+              </div>
+            </div>
+          </div> 
+
+          <div class="row mb-4">
+            <div class="col-md-12" data-aos="fade-up">
+              <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls>
+                  <source src="assets/img/motor-control/cubic-trajectory.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>Demonstration of tracking a cubic trajectory input by the user in a MATLAB client.</figcaption>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
-    
     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="sticky-content pt-2">
-              <p><a href="assets/files/my-work/e-Bike.pdf" class="readmore" target="_blank">View Full Report</a></p>
-              <h3 class="h3">Overview</h3>
-              <p>I completed this project for a mechatronics class I took during my Sophomore year (2021).
-                In this project, I wired and programmed the NU32 PIC32 microcontroller to control the position of a motor. 
-                The code stored on the microcontroller was programmed in C, which communicates with a MATLAB client. Through the MATLAB 
-                client, the user inputs a trajectory of angles that will be tracked by the motor. The schematic of the process is shown below, 
-                where there is an inner current (PI) controller and an outer position (PID) controller, with weights that can be adjusted by 
-                the user through the client. This project was divided into hardware and software. See examples demonstrations of the motor 
-                interacting with the MATLAB client below.
-              </p>
-              <ul class="list-unstyled list-line mb-5">
-                As a team of entirely mechanical engineers, only four of us had experience with microcontrollers; however, none of us had very
-                in-depth knowledge. Of the four, I had taken the most computer science and mechatronics classes, so I became responsible 
-                for a lot of the programming and hardware. This included:
-                <li>Retrofitting a regular bike with a mid-drive e-Bike conversion kit.</li>
-                <li>Rewiring the motor controller to take input from our microcontroller.</li>
-                <li>Sending sensor data to the IoT platform through MQTT protocols.</li>
-                <li>Creating a React Native app (with user profiles), which communicated with the IoT through HTTP protocol and 
-                  allowed the user to see their current assist level, heart rate, and power input.</li>
-              </ul>
-              <h3 class="h3">Lessons Learned</h3>
-              <p>This project forced me to learn a lot. I had never worked with IoT clients before, so I had to learn MQTT and HTTP protocols.
-                I had also never made a React website, which was necessary for visualizing real-time data. The first motor controller we 
-                purchased was entirely in Chinese, so it took me hours of trial and error to figure out how to "hack" into the system. We also
-                did not have all the tools available for taking a bike apart, and had to get creative with making some tools ourselves.
-              </p>
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-md-12 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="pt-2">
+                <h3 class="h3">Hardware</h3>
+                <p>The microcontroller sends a 20 kHz PWM duty to the H-bridge, which sends the current 
+                  to the motor. The H-bridge is a series of transistors that turn on and off depending on the amount of current flowing through it. 
+                  These transistors change the amount and direction of current flowing through the motor, allowing the motor to change directions. 
+                  This is not possible to be done through the microcontroller directly because the digital output pins only allow positive voltage 
+                  and 0 voltage. The current that is sent from the H-bridge to the motor is put in series with the RS+ and RS- ends of the MAX9918 
+                  to sense the current through the motor. Between the RS+ and RS- ends of the chip, there is an internal resistor. The MAX9918 
+                  measures the voltage drop across these two ends, offsets the voltage by the REFIN voltage, then amplifies this voltage based on 
+                  the gains set by the resistors at FB (amplification is done by an internal op-amp). This voltage is then read into an analog input 
+                  into the microcontroller. I set my current-sensor gain to ~61, but this number did not really matter, as the current PID controller 
+                  would rescale the signal again. The secondary microcontroller reads the position of the motor from the encoder, and this information 
+                  is sent to the main NU32 microcontroller via SPI.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4 justify-content-center">
+            <div class="col-md-8 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="pt-2">
+               <img src="assets/img/motor-control/circuit-diagram.jpg" class="img-fluid">
+               <figcaption>Circuit diagram.</figcaption>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-12 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="pt-2">
+                <h3 class="h3">Software</h3>
+                <div class="clearfix">
+                  <img src="assets/img/motor-control/current_PI.jpg" class="col-md-5 float-md-end mb-3 ms-md-3">
+                  <p>The C code is organized into five main functions: encoder reading, current sensing, current control, position control, 
+                    and utilities. The main.c code interfaces with the client and calls upon the functions stored in these files when needed. 
+                    The encoder file owns an SPI (serial peripheral interface) peripheral and deals with reading the encoder count from the 
+                    secondary microcontroller and converting this to an angle in degrees. The current sensing file owns the ADC 
+                    (analog-to-digital converter) peripheral which reads the ADC counts from the current sensing block and converts it to 
+                    milliamps. The utilities file keeps track of the “mode” of the microcontroller: IDLE, PWM, ITEST, HOLD, or TRACK. The 
+                    position controller owns a timer to implement a 200 Hz control loop. It loads a trajectory as well as position gains 
+                    from the client, which are used in a PID controller that sends a current trajectory to the current controller. The current 
+                    control file holds the bulk of code because the output current of the microcontroller directly determines the behavior of 
+                    the motor.
+                  </p>
+                  <p>The current control file owns two timers, an output compare, and one digital output. The first timer is used to implement 
+                    a 5 kHz current control loop, while the output compare and second timer are used to send a 20 kHz PWM signal to the H-bridge 
+                    through the digital output. In IDLE mode, the current controller sends no PWM and brakes the motor. In PWM mode, a PWM duty 
+                    specified by the user is sent to the H-bridge. In ITEST mode, the current controller uses the controller gains set by the 
+                    user to track a 100 Hz ±200 mA square reference wave. In HOLD or TRACK mode, the current controller tracks a trajectory given
+                    by the position controller based on the gains specified by the user. The PI controller compares the sensed current with the 
+                    reference current, determines an integral error, and uses the proportionality and integral gains to determine a new duty 
+                    cycle. The code for the PI controller is shown.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
