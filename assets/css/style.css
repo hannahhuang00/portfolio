@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+a h3 {
+  display: inline;
+}
+
 a:hover {
   color: #000;
 }
@@ -203,6 +207,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   color: #000;
   transition: 0.2s all ease;
   font-weight: 700;
+  border-radius: 10px 0px 10px 0px;
 }
 .readmore:active, .readmore:focus, .readmore:hover {
   outline: none;
