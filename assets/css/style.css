@@ -278,6 +278,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .intro-links a {
   padding: 0 2rem 0 0;
+  color: black;
+}
+
+.intro-links a:hover {
+  color: #777;
 }
 
 .timeline {
