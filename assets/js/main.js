@@ -102,7 +102,7 @@
 
 })()
 
-/** Experience Drop Downs */
+/** Show/Hide Experiences on click */
 
 function showHide(selExperience, experiences) {
   hideExp(selExperience,experiences);
@@ -125,4 +125,21 @@ function hideExp(selExperience, experiences) {
       x.style.display = "none";
     }
   }
+}
+
+/** Back to Top button */
+let topButton = document.getElementById("topBtn");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

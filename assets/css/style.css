@@ -27,6 +27,10 @@ a {
   display: inline;
 }
 
+.icon {
+  transition: 0.3s;
+}
+
 a:hover {
   color: #000;
 }
@@ -42,7 +46,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .section-first {
@@ -205,7 +209,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-size: 12px;
   text-transform: uppercase;
   color: #000;
-  transition: 0.2s all ease;
+  transition: 0.3s all ease;
   font-weight: 700;
   border-radius: 10px 0px 10px 0px;
 }
@@ -254,28 +258,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: #000;
 }
 
-.form-control {
-  border-radius: 0;
-  background: #f8f9fa;
-  border: 1px solid transparent;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-.form-control:active, .form-control:focus {
-  background: #eff1f4;
-  outline: none;
-  box-shadow: none;
-  border: 1px solid transparent;
-}
-
-.custom-progress {
-  height: 7px;
-  border-radius: 0;
-}
-.custom-progress .progress-bar {
-  background: #000;
-}
-
 .intro-links a {
   padding: 0 2rem 0 0;
   color: black;
@@ -283,13 +265,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .intro-links a:hover {
   color: #777;
-}
-
-.timeline {
-  width: 60vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Services */
@@ -367,12 +342,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   display: none;
 }
 
-p .exp-date {
+.exp-date {
   font-style: italic;
 }
 
-p .exp-title {
-  font-weight: bold;
+.exp-title {
+  margin-bottom: 0;
 }
 
 .btn {
@@ -384,6 +359,7 @@ p .exp-title {
 
 .btn:hover {
   opacity: 0.4;
+  transform: scale(1.1);
 }
 
 
@@ -440,4 +416,27 @@ p .exp-title {
 }
 .social a:hover {
   color: #000;
+}
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  align-self: center;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: #777;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#topBtn i {
+  font-size: 30px;
+}
+
+#topBtn:hover {
+  opacity: 0.4;
 }
